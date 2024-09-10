@@ -1,14 +1,23 @@
-from htmlnode import HTMLNode
+from leafnode import LeafNode
 
 
 def main():
-    node = HTMLNode(props={
-        "href": "https://www.google.com",
-        "target": "_blank",
-    }
+    leaf = LeafNode(
+        value="Click here",
+        tag="a",
+        props={
+            "href": "https://www.google.com",
+            "target": "_blank",
+        })
+    leaf2 = LeafNode(
+        value="This is a paragraph",
+        tag="p",
     )
+    leaf3 = LeafNode(value="This is a paragraph")
 
-    node.props_to_html()
+    print(leaf.to_html())
+    print(leaf2.to_html())
+    print(leaf3.to_html())
 
 
 if __name__ == "__main__":
