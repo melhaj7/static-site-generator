@@ -1,12 +1,12 @@
-from htmlnode import HTMLNode
+from src.htmlnode import HTMLNode
 
 
 class LeafNode(HTMLNode):
     def __init__(self, value, tag=None, children=None, props=None):
         super().__init__(tag, value, children, props)
 
-        # if self.children is not None:
-        #     raise ValueError("Children are not allowed")
+        if self.children is not None:
+            raise ValueError("Children are not allowed")
 
     def to_html(self):
         if self.value is None:

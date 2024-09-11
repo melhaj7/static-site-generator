@@ -2,7 +2,7 @@
 
 #!/bin/bash
 # Run only a specific test file
-python3 -m unittest src.test_htmlnode
+python3 -m unittest src/test_leafnode.py
 
 # To run just one test class:
 # python3 -m unittest src.test_htmlnode.TestHTMLNode
